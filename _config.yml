@@ -17,6 +17,7 @@ author:
 # 빌드 설정
 markdown: kramdown
 permalink: /posts/:title/
+future: true # 미래 날짜/시간 포스트도 즉시 발행되도록 설정
 
 # 날짜 및 언어 설정
 timezone: Asia/Seoul
