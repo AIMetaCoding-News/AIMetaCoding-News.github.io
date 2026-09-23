@@ -1,0 +1,38 @@
+# ==========================================
+# GitHub Pages & Jekyll Configuration
+# ==========================================
+
+# 사이트 기본 정보
+title: "AI 데일리 브리프"
+tagline: "7주간 쉽게 읽는 인공지능 트렌드 & 실전 인사이트"
+description: "어려운 기술 용어 대신 일상의 언어로 풀어내는 7주간의 주간 AI 뉴스레터입니다."
+url: "https://aimetacoding-news.github.io" # GitHub Pages 도메인
+baseurl: "" # 사용자/조직 페이지이므로 빈 문자열 유지
+
+# 작성자 / 운영자 정보
+author:
+  name: "AI 브리프 에디터"
+  email: "joonseekpark@gmail.com"
+
+# 빌드 설정
+markdown: kramdown
+permalink: /posts/:title/
+
+# 날짜 및 언어 설정
+timezone: Asia/Seoul
+locale: ko-KR
+encoding: utf-8
+
+# Jekyll kramdown 옵션 (GFM 호환)
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# 빌드 제외 목록
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .gitignore

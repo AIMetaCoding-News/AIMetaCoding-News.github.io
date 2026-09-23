@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}</title>
+  
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author.name }}">
+
+  <!-- Open Graph / SNS 공유 메타 태그 -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- 웹폰트: Pretendard (가독성 높은 한글 웹폰트) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <!-- 스타일시트 -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- 헤더 -->
+    <header class="site-header">
+      <div class="header-container">
+        <a href="{{ '/' | relative_url }}" class="brand-link">
+          <span class="brand-badge">7-WEEK AI BRIEF</span>
+          <h1 class="brand-title">{{ site.title }}</h1>
+        </a>
+        <p class="brand-tagline">{{ site.tagline }}</p>
+      </div>
+    </header>
+
+    <!-- 메인 본문 콘텐츠 -->
+    <main class="site-main">
+      <div class="content-container">
+        {{ content }}
+      </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <p class="footer-notice">
+          <strong>{{ site.title }}</strong> · 7주 단기 AI 프로젝트 아카이브
+        </p>
+        <p class="footer-copyright">
+          © {{ 'now' | date: "%Y" }} {{ site.author.name }}. Published on GitHub Pages.
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

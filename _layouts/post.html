@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<article class="post-article">
+  <!-- 포스트 헤더 -->
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">
+        📅 {{ page.date | date: "%Y년 %m월 %d일" }}
+      </time>
+      {% if page.category %}
+        <span class="meta-divider">•</span>
+        <span class="post-category">{{ page.category }}</span>
+      {% endif %}
+      {% if page.read_time %}
+        <span class="meta-divider">•</span>
+        <span class="post-readtime">⏱ {{ page.read_time }} 읽기</span>
+      {% endif %}
+    </div>
+
+    <h1 class="post-title">{{ page.title }}</h1>
+
+    {% if page.description %}
+      <p class="post-description-lead">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <hr class="post-divider">
+
+  <!-- 포스트 본문 -->
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <!-- 포스트 푸터 네비게이션 -->
+  <footer class="post-footer">
+    <div class="post-navigation">
+      {% if page.previous.url %}
+        <a class="nav-prev" href="{{ page.previous.url | relative_url }}">
+          <span class="nav-label">← 이전 글</span>
+          <span class="nav-title">{{ page.previous.title }}</span>
+        </a>
+      {% else %}
+        <div class="nav-placeholder"></div>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a class="nav-next" href="{{ page.next.url | relative_url }}">
+          <span class="nav-label">다음 글 →</span>
+          <span class="nav-title">{{ page.next.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="back-home-wrapper">
+      <a href="{{ '/' | relative_url }}" class="back-home-button">← 뉴스 목록으로 돌아가기</a>
+    </div>
+  </footer>
+</article>

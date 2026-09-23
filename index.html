@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="home-container">
+  <!-- 프로젝트 소개 배너 (초기 상태에서도 허전하지 않도록 안내) -->
+  <section class="intro-card">
+    <div class="intro-badge">프로젝트 소개</div>
+    <h2 class="intro-heading">일반인을 위한 7주 완성 AI 트렌드 & 실전 가이드</h2>
+    <p class="intro-text">
+      매주 1~2편씩, 복잡한 수식과 개발 용어 없이 실생활에 바로 쓰이는 인공지능 이야기만을 엄선해 전달합니다.
+      새로운 글은 매주 업데이트됩니다.
+    </p>
+  </section>
+
+  <!-- 뉴스 기사 리스트 섹션 -->
+  <section class="articles-section">
+    <div class="section-header">
+      <h3 class="section-title">발행된 뉴스 브리프</h3>
+      <span class="article-count">총 {{ site.posts.size }}편의 글</span>
+    </div>
+
+    {% if site.posts.size > 0 %}
+      <ul class="article-list">
+        {% for post in site.posts %}
+          <li class="article-card">
+            <a href="{{ post.url | relative_url }}" class="article-card-link">
+              <div class="article-card-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}" class="article-card-date">
+                  {{ post.date | date: "%Y.%m.%d" }}
+                </time>
+                {% if post.category %}
+                  <span class="article-card-badge">{{ post.category }}</span>
+                {% endif %}
+              </div>
+              <h4 class="article-card-title">{{ post.title }}</h4>
+              <p class="article-card-desc">
+                {% if post.description %}
+                  {{ post.description }}
+                {% else %}
+                  {{ post.excerpt | strip_html | truncatewords: 25 }}
+                {% endif %}
+              </p>
+              <span class="article-card-more">기사 읽기 →</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <!-- 포스트가 아직 없을 때의 비어있는 상태 UI -->
+      <div class="empty-state">
+        <div class="empty-state-icon">📝</div>
+        <h4 class="empty-state-title">아직 발행된 뉴스가 없습니다</h4>
+        <p class="empty-state-desc">
+          첫 번째 AI 뉴스 기사가 곧 발행될 예정입니다.<br>
+          저장소의 <code>_posts/</code> 폴더에 첫 마크다운 파일을 추가해 보세요!
+        </p>
+      </div>
+    {% endif %}
+  </section>
+</div>
