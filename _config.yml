@@ -17,6 +17,7 @@ author:
 # 빌드 설정
 markdown: kramdown
 permalink: /posts/:title/
+future: true
 
 # 날짜 및 언어 설정
 timezone: Asia/Seoul
