@@ -32,11 +32,11 @@ GitHub Pages의 기본 Jekyll 엔진을 활용하여 별도의 빌드 도구나 
 ```markdown
 ---
 layout: post
-title: "2주차: 일상 업무를 10배 빠르게 만드는 프롬프트 작성법"
-date: 2026-10-01 09:00:00 +0900
-category: "실전 팁"
-read_time: "3분"
-description: "질문 한 줄만 바꿔도 답변 퀄리티가 달라집니다. 직장인을 위한 핵심 프롬프트 공식."
+title: "제목"
+date: 2026-00-00 09:00:00 +0900
+category: "AI 도구"
+read_time: "0분"
+description: "설명"
 ---
 
 여기에 본문 내용을 마크다운으로 편하게 작성하세요!
