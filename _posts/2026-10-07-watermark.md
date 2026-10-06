@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI Watermark: AI가 쓴 글과 사람이 쓴 글"
-date: 2026-00-00 09:00:00 +0900
+date: 2026-10-07 09:00:00 +0900
 category: "AI 소식"
 read_time: "5분"
 description: "내 글에 숨겨진 투명 도장, 'AI 워터마크' 시대가 열리다"
