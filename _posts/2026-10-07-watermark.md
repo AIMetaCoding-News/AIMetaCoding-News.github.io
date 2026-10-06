@@ -97,6 +97,6 @@ AI 워터마크 기술이 도입되었다고 해서 당장 우리가 AI를 활�
 ### 📚 참고 자료
 
 * [EU AI Act Article 50](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689#art_50)
-* [Anthropic 공식 문서: Claude의 텍스트 워터마크 도입 가이드 (2026.08)](https://valueaddvc.com/pulse/anthropic-claude-text-watermarks-eu-ai-act-2026)
+* [Anthropic: How Claude’s text watermark works (2026.08)](https://www.anthropic.com/news/claude-text-watermark)
 * [OpenAI Our approach to EU text provenance rules (2026.10)](https://openai.com/index/eu-text-provenance/)
 * [C2PA 공식 사양서 및 이미지 메타데이터 작동 원리](https://spec.c2pa.org/specifications/specifications/2.4/guidance/Guidance.html)
